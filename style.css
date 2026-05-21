@@ -1,0 +1,504 @@
+/* =====================
+   GLOBAL RESET
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: #333;
+}
+
+/* =====================
+   COMMON LAYOUT
+===================== */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* =====================
+   HEADER / NAVBAR
+===================== */
+.header {
+  background: #351bff;
+  padding: 18px 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffd000;
+  text-decoration: none;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.menu li a {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  padding-bottom: 4px;
+}
+
+.menu li a:hover,
+.menu li a.active {
+  border-bottom: 2px solid #ffffff;
+}
+
+.search-icon {
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* =====================
+   HERO (HOME PAGE)
+===================== */
+.hero {
+  height: 90vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("images/hero-food.jpg") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content h1 {
+  color: #ffffff;
+  font-size: 48px;
+}
+
+.hero-content span {
+  color: #ffb703;
+}
+
+.hero-content p {
+  color: #dddddd;
+  margin: 15px 0;
+}
+
+/* =====================
+   BUTTONS
+===================== */
+.btn {
+  background: #ff6a00;
+  padding: 12px 30px;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 30px;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: #e55c00;
+}
+
+.btn-small {
+  background: #ff7a00;
+  color: #ffffff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-small:hover {
+  background: #e56c00;
+}
+
+/* =====================
+   PAGE HERO (ABOUT, CONTACT, EXPLORE)
+===================== */
+.page-hero {
+  background: #ffb347;
+  color: #ffffff;
+  padding: 50px 0;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+/* =====================
+   SECTIONS
+===================== */
+.section {
+  padding: 60px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+/* =====================
+   GRID / CARDS
+===================== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* HOME CATEGORY CARDS */
+.card {
+  background: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  text-align: center;
+  padding: 15px;
+}
+
+/* EXPLORE PRODUCT CARDS */
+.product-card {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* =====================
+   WHY CHOOSE US
+===================== */
+.why {
+  background: #fff6f0;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.why-box i {
+  font-size: 40px;
+  color: #ff6a00;
+}
+
+.why-box h4 {
+  margin: 15px 0;
+}
+
+/* =====================
+   ABOUT PAGE
+===================== */
+.list {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.list li {
+  margin-bottom: 8px;
+}
+
+/* =====================
+   CONTACT PAGE
+===================== */
+.contact-bg {
+  background: #ffe7c4;
+  padding: 60px 0;
+}
+
+.contact-card {
+  background: #ffffff;
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  margin-right: 15px;
+  font-size: 14px;
+}
+
+.submit-btn {
+  width: 100%;
+  background: #ff6a00;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #e55c00;
+}
+
+/* =====================
+   FOOTER
+===================== */
+.footer {
+  background: #222222;
+  color: #cccccc;
+  text-align: center;
+  padding: 30px 0;
+}
+/* =====================
+   SMOOTH TRANSITIONS (GLOBAL)
+===================== */
+.card,
+.product-card,
+.btn,
+.btn-small,
+.submit-btn {
+  transition: all 0.3s ease;
+}
+
+/* =====================
+   CARD HOVER EFFECT
+===================== */
+.card:hover,
+.product-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Image zoom inside card */
+.card img,
+.product-card img {
+  transition: transform 0.4s ease;
+}
+
+.card:hover img,
+.product-card:hover img {
+  transform: scale(1.1);
+}
+
+/* =====================
+   BUTTON HOVER EFFECT
+===================== */
+.btn:hover,
+.btn-small:hover,
+.submit-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 106, 0, 0.5);
+}
+
+/* =====================
+   NAVBAR LINK HOVER EFFECT
+===================== */
+.menu li a {
+  position: relative;
+}
+
+.menu li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.menu li a:hover::after,
+.menu li a.active::after {
+  width: 100%;
+}
+
+/* =====================
+   SOCIAL ICON HOVER EFFECT
+===================== */
+.footer .social i {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer .social i:hover {
+  transform: translateY(-5px) scale(1.1);
+  color: #ff6a00;
+}
+
+/* =====================
+   FORM INPUT HOVER / FOCUS
+===================== */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ff6a00;
+  box-shadow: 0 0 8px rgba(255, 106, 0, 0.4);
+  outline: none;
+}
+/* =====================
+   MOBILE RESPONSIVE FIX
+===================== */
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .menu li a {
+    font-size: 16px;
+  }
+
+  .search-icon {
+    display: none; /* optional: hide search on mobile */
+  }
+
+  /* HERO SECTION */
+  .hero {
+    height: auto;
+    padding: 80px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  /* PAGE HERO */
+  .page-hero {
+    font-size: 22px;
+    padding: 35px 10px;
+  }
+
+  /* SECTIONS */
+  .section {
+    padding: 40px 20px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  /* GRID / CARDS */
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card img,
+  .product-card img {
+    height: 200px;
+  }
+
+  /* CONTACT PAGE */
+  .contact-card {
+    padding: 20px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+  }
+
+  /* FOOTER */
+  .footer h3 {
+    font-size: 20px;
+  }
+
+  .footer p {
+    font-size: 14px;
+  }
+}
+
+/* =====================
+   EXTRA SMALL DEVICES
+===================== */
+@media (max-width: 480px) {
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+  }
+
+  .btn,
+  .btn-small,
+  .submit-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu li a {
+    font-size: 15px;
+  }
+}
+
+.footer .social i {
+  margin: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.copy {
+  margin-top: 10px;
+  font-size: 14px;
+}
